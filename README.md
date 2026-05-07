@@ -27,6 +27,9 @@ The application currently supports:
 * Addition calculations
 * Multiplication calculations
 * Area of a circle calculations
+* Simplified planetary distance simulations
+* Approximate real-time Earth-to-planet distance calculations
+* Time-based orbital simulation using Unix epoch calculations
 * SQLite database integration
 * Persistent calculation history
 * Viewing saved calculation history
@@ -34,6 +37,11 @@ The application currently supports:
 * Overflow detection for invalid or infinite results
 * Colored terminal output and styled warning/error messages
 
+---
+
+# Recent additions include:
+ simplified orbital mechanics simulations capable of estimating current distances between Earth and several planets using time-based orbital calculations.
+ 
 ---
 
 # Technologies Used
@@ -134,14 +142,16 @@ The database is created automatically the first time the application runs.
 Planned future additions may include:
 
 * Additional mathematical operations
-* Scientific calculations
-* Orbital mechanics calculations
-* Planetary distance calculations
+* More advanced scientific calculations
+* Expanded orbital mechanics simulations
+* NASA/JPL API integration for more accurate real-time planetary position data
+* Comparison mode between simplified simulations and live astronomical data
 * More advanced database functionality
 * Improved terminal UI
 * Graphical user interface experiments
 * Web frontend experiments using Vue and Julia backends
 * Statistical and simulation tools
+* Scientific visualization features
 * More advanced scientific computing demonstrations
 
 ---
@@ -161,5 +171,5 @@ The repository will continue evolving over time as I expand my Julia knowledge a
 
 Jon Phillips
 
-Computer Programming Student
-Central New Mexico Community College
+Software Development Intern,
+Nebula_NLU

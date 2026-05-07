@@ -2,7 +2,9 @@ include("math_tools.jl")
 include("menu.jl")
 include("helpers.jl")
 include("database_helpers.jl")
+include("planet_tools.jl")
 include("calculator_operations.jl")
+
 
 
 using .MathTools
@@ -10,6 +12,7 @@ using .Menu
 using .Helpers
 using .CalculatorOperations
 using .DatabaseHelpers
+using .PlanetTools
 
 
 
@@ -41,6 +44,9 @@ function main()
             clear_history(db)
 
         elseif choice == "6"
+            perform_planet_distance()
+
+        elseif choice == "7"
             printstyled("😁    Thanks for using my program, Have a wonderful day!   😁\n\n\n", color=:green, bold=true)
             running = false
 
