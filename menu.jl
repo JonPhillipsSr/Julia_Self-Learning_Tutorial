@@ -16,15 +16,16 @@ module Menu
         println("9. Exit")
     end
 
-  function show_planet_menu()
-    println("=== Planet Distance Menu ===")
-    println("1. Mercury")
-    println("2. Venus")
-    println("3. Mars")
-    println("4. Jupiter")
-    println("5. Saturn")
-    println("6. Uranus")
-    println("7. Neptune")
-end
+    function show_planet_menu()
+        println("=== Planet Distance Menu ===")
+        println("1. Mercury")
+        println("2. Venus")
+        println("3. Mars")
+        println("4. Jupiter")
+        println("5. Saturn")
+        println("6. Uranus")
+        println("7. Neptune")
+    end
+
 
 end

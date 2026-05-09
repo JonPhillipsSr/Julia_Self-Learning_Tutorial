@@ -130,12 +130,38 @@ module CalculatorOperations
 
     function perform_fibonacci()
         printstyled("Fibonacci Sequence Selected\n", color=:magenta)
-        num1 = get_number("Enter the first number of the sequence ==> ")
-        num2 = get_number("Enter the second number of the sequence ==> ")
-        iterations = Int(get_number("How many iterations of the sequence to you want to run? ==> "))
-        result = fibonacci_sequence(num1, num2, iterations)
-        println("\nHere is your sequence")
-        println(result)
+        println()
+        
+        
+        run = true
+        while run
+            println("To run a standard fibonacci sequence (seeds of 0 and 1) at 100 iterations enter 1,")
+            println("To customize the sequence enter 2")
+            print("==> ")
+            choice = readline()
+
+            if choice == "1"
+                num1 = 0
+                num2 = 1
+                iterations = 100
+                result = fibonacci_sequence(num1, num2, iterations)
+                println("\nHere is your sequence")
+                println(result)
+                run = false
+            
+            elseif choice == "2"
+                num1 = get_number("Enter the first seed ==> ")
+                num2 = get_number("Enter the second seed ==> ")
+                iterations = Int(get_number("How many iterations of the sequence to you want to run? ==> "))
+                result = fibonacci_sequence(num1, num2, iterations)
+                println("\nHere is your sequence")
+                println(result)
+                run = false
+
+            else
+                printstyled("Please select a valid entry\n", color=:red)
+            end
+        end
     end
 
     function perform_factorial(db)

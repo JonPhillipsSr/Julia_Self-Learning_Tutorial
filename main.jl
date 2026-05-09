@@ -57,7 +57,7 @@ function main()
             running = false
 
         else 
-            println("Please select a valid entry")
+            printstyled("Please select a valid entry\n", color=:red)
         end
     end
 

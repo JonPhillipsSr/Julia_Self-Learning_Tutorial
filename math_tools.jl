@@ -24,6 +24,8 @@ module MathTools
         a = BigInt(num1)
         b = BigInt(num2)
         x = iterations
+        push!(sequence, a)
+        push!(sequence, b)
 
         for i in 1:x
             c = a + b
