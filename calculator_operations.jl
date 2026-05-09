@@ -4,6 +4,7 @@ module CalculatorOperations
     export perform_multiplication
     export perform_area_of_circle
     export perform_planet_distance
+    export perform_fibonacci
     
 
     using ..MathTools
@@ -124,6 +125,16 @@ module CalculatorOperations
 )
         
         display_results("Approximate distance from Earth (km): ", distance)
+    end
+
+    function perform_fibonacci()
+        println("Lets Generate a Fibonacci sequence")
+        num1 = get_number("Enter the first number of the sequence ==> ")
+        num2 = get_number("Enter the second number of the sequence ==> ")
+        iterations = Int(get_number("How many iterations of the sequence to you want to run? ==> "))
+        result = fibonacci_sequence(num1, num2, iterations)
+        println("\nHere is your sequence")
+        println(result)
     end
 
 

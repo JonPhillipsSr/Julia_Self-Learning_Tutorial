@@ -38,15 +38,18 @@ function main()
             perform_area_of_circle(db)
         
         elseif choice == "4"
-            perform_planet_distance(db)
+            perform_fibonacci()
         
         elseif choice == "5"
+            perform_planet_distance(db)
+        
+        elseif choice == "6"
             show_history(db)
 
-        elseif choice == "6"
+        elseif choice == "7"
             clear_history(db)
 
-        elseif choice == "7"
+        elseif choice == "8"
             printstyled("😁    Thanks for using my program, Have a wonderful day!   😁\n\n\n", color=:green, bold=true)
             running = false
 
