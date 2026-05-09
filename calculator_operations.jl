@@ -13,6 +13,7 @@ module CalculatorOperations
     using ..DatabaseHelpers
     using ..PlanetTools
     using ..Menu
+    using ..PlotTools
 
     function perform_addition(db)
         printstyled("Addition Selected\n", color=:magenta)
@@ -135,7 +136,7 @@ module CalculatorOperations
         
         run = true
         while run
-            println("To run a standard fibonacci sequence (seeds of 0 and 1) at 100 iterations enter 1,")
+            println("To run a standard fibonacci sequence (seeds of 0 and 1) at 10 iterations enter 1,")
             println("To customize the sequence enter 2")
             print("==> ")
             choice = readline()
@@ -143,19 +144,21 @@ module CalculatorOperations
             if choice == "1"
                 num1 = 0
                 num2 = 1
-                iterations = 100
+                iterations = 10
                 result = fibonacci_sequence(num1, num2, iterations)
                 println("\nHere is your sequence")
                 println(result)
+                plot_sequence(result, "Fibonacci Sequence")
                 run = false
             
             elseif choice == "2"
                 num1 = get_number("Enter the first seed ==> ")
                 num2 = get_number("Enter the second seed ==> ")
-                iterations = Int(get_number("How many iterations of the sequence to you want to run? ==> "))
+                iterations = Int(get_number("How many iterations of the sequence do you want to run? ==> "))
                 result = fibonacci_sequence(num1, num2, iterations)
                 println("\nHere is your sequence")
                 println(result)
+                plot_sequence(result, "Fibonacci Sequence")
                 run = false
 
             else

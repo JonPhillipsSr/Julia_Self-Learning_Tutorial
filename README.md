@@ -28,6 +28,8 @@ The application currently supports:
 * Multiplication calculations
 * Area of a circle calculations
 * Fibonacci sequence generation with custom starting values
+* Terminal-based graph plotting using UnicodePlots.jl
+* Fibonacci sequence visualization directly in the console
 * Factorial calculations using BigInt for extremely large numbers
 * Simplified planetary distance simulations
 * Approximate real-time Earth-to-planet distance calculations
@@ -58,6 +60,7 @@ Recent additions to the project include:
 * Julia
 * SQLite
 * DBInterface.jl
+* UnicodePlots.jl
 
 ---
 
@@ -71,6 +74,7 @@ calculator_operations.jl
 menu.jl
 database_helpers.jl
 planet_tools.jl
+plot_tools.jl
 calculator_history.db
 
 ## Module Responsibilities
@@ -84,6 +88,7 @@ calculator_history.db
 | `menu.jl`                  | Main menu and submenu display functions                        |
 | `database_helpers.jl`      | SQLite database management and history storage                 |
 | `planet_tools.jl`          | Planetary simulation logic and orbital distance calculations   |
+| 'plot_tools.jl'            | Terminal-based graphing and data visualization
 ---
 
 # Installation & Setup
@@ -113,6 +118,7 @@ Open the Julia REPL and run:
 using Pkg
 Pkg.add("SQLite")
 Pkg.add("DBInterface")
+Pkg.add("UnicodePlots")
 ```
 
 ---
@@ -162,6 +168,9 @@ Planned future additions may include:
 * Statistical and simulation tools
 * Scientific visualization features
 * More advanced scientific computing demonstrations
+* Planetary distance trend visualization
+* Scientific plotting and graph analysis
+* Time-series visualization tools
 
 ---
 

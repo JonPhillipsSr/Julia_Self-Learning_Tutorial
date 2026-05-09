@@ -3,7 +3,9 @@ include("menu.jl")
 include("helpers.jl")
 include("database_helpers.jl")
 include("planet_tools.jl")
+include("plot_tools.jl")
 include("calculator_operations.jl")
+
 
 
 
@@ -13,6 +15,7 @@ using .Helpers
 using .CalculatorOperations
 using .DatabaseHelpers
 using .PlanetTools
+using .PlotTools
 
 
 
