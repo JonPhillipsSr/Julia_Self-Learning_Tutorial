@@ -16,7 +16,7 @@ module MathTools
     end
 
     function area_of_circle(r)
-        return (r * r) * pi
+        return π * r^2
     end
 
     function fibonacci_sequence(num1, num2, iterations)
@@ -37,8 +37,13 @@ module MathTools
 
     function calculate_factorial(num1)
         
+        
+        
         if num1 < 0
-           printstyled(" ☠️    ERROR   ☠️\nFactorials cannot be calculated for negative numbers\n", color=:red, bold=true)
+        printstyled(" ☠️    ERROR   ☠️\nFactorials cannot be calculated for negative numbers\n", color=:red, bold=true)
+        
+        return nothing
+        
         end
 
         result = BigInt(1)
@@ -48,5 +53,6 @@ module MathTools
         end
 
         return result
+        
     end
 end

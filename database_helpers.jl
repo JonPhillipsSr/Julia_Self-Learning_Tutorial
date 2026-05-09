@@ -15,10 +15,10 @@ module DatabaseHelpers
         DBInterface.execute(db, """
             CREATE TABLE IF NOT EXISTS history(
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            operation TEXT NOT NULL,
+            operation TEXT,
             input1 REAL,
             input2 REAL,
-            result REAL NOT NULL
+            result REAL 
             )
         """)
 
