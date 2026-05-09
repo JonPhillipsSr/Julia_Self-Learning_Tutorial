@@ -34,7 +34,6 @@ The application currently supports:
 * Time-based orbital simulation using Unix epoch calculations
 * SQLite database integration
 * Persistent calculation history
-* Saving factorial calculations to the database
 * Viewing saved calculation history
 * Clearing calculation history with confirmation prompts
 * Input validation and error handling
