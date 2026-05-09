@@ -171,5 +171,3 @@ The repository will continue evolving over time as I expand my Julia knowledge a
 
 Jon Phillips
 
-Software Development Intern,
-Nebula_NLU
