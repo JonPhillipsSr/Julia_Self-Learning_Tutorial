@@ -5,6 +5,7 @@ module CalculatorOperations
     export perform_area_of_circle
     export perform_planet_distance
     export perform_fibonacci
+    export perform_factorial
     
 
     using ..MathTools
@@ -14,7 +15,7 @@ module CalculatorOperations
     using ..Menu
 
     function perform_addition(db)
-        println("Addition Selected")
+        printstyled("Addition Selected\n", color=:magenta)
         num1 = get_number("Enter the first number ==> ")
         num2 = get_number("Enter the second number ==> ")
         result = add_numbers(num1, num2)
@@ -29,7 +30,7 @@ module CalculatorOperations
     end
 
     function perform_multiplication(db)
-        println("Multiplication Selected")
+        printstyled("Multiplication Selected\n", color=:magenta)
         num1 = get_number("Enter the first number ==> ")
         num2 = get_number("Enter the second number ==> ")
         result = multiply_numbers(num1, num2)
@@ -44,7 +45,7 @@ module CalculatorOperations
     end
 
     function perform_area_of_circle(db)
-        println("Circle Area Selected")
+        printstyled("Circle Area Selected\n", color=:magenta)
         radius = get_number("Enter the radius of the circle ==> ")
         area = area_of_circle(radius)
         display_results("The area of the circle is ", area)
@@ -122,13 +123,13 @@ module CalculatorOperations
             nothing,
             nothing,
             distance
-)
+        )
         
         display_results("Approximate distance from Earth (km): ", distance)
     end
 
     function perform_fibonacci()
-        println("Lets Generate a Fibonacci sequence")
+        printstyled("Fibonacci Sequence Selected\n", color=:magenta)
         num1 = get_number("Enter the first number of the sequence ==> ")
         num2 = get_number("Enter the second number of the sequence ==> ")
         iterations = Int(get_number("How many iterations of the sequence to you want to run? ==> "))
@@ -136,6 +137,22 @@ module CalculatorOperations
         println("\nHere is your sequence")
         println(result)
     end
+
+    function perform_factorial(db)
+        printstyled("Factorial Selected\n", color=:magenta)
+        num1 = Int(get_number("Enter a number to calculate it's factorial ==> "))
+        result = calculate_factorial(num1)
+        println(num1, "! = ", result)
+
+        save_calculation(
+            db,
+            "Factorial",
+            num1,
+            nothing,
+            result
+        )
+    end
+    
 
 
     

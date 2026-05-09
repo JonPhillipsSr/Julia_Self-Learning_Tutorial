@@ -26,7 +26,7 @@ function main()
         print("Enter your choice here ==> ")
         choice = readline()
 
-        println("You chose: ", choice)
+        
 
         if choice == "1"
             perform_addition(db)
@@ -39,17 +39,20 @@ function main()
         
         elseif choice == "4"
             perform_fibonacci()
-        
+            
         elseif choice == "5"
-            perform_planet_distance(db)
+            perform_factorial(db)
         
         elseif choice == "6"
+            perform_planet_distance(db)
+        
+        elseif choice == "7"
             show_history(db)
 
-        elseif choice == "7"
+        elseif choice == "8"
             clear_history(db)
 
-        elseif choice == "8"
+        elseif choice == "9"
             printstyled("😁    Thanks for using my program, Have a wonderful day!   😁\n\n\n", color=:green, bold=true)
             running = false
 

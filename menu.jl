@@ -9,10 +9,11 @@ module Menu
         println("2. Multiply Numbers")
         println("3. Calculate the area of a circle")
         println("4. Run Fibonacci Sequence (this option does not currently save to the db, WIP)")
-        println("5. Calculate distance to planet")
-        println("6. View History")
-        println("7. Clear History")
-        println("8. Exit")
+        println("5. Calculate a factorial")
+        println("6. Calculate distance to planet")
+        println("7. View History")
+        println("8. Clear History")
+        println("9. Exit")
     end
 
   function show_planet_menu()

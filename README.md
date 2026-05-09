@@ -27,21 +27,31 @@ The application currently supports:
 * Addition calculations
 * Multiplication calculations
 * Area of a circle calculations
+* Fibonacci sequence generation with custom starting values
+* Factorial calculations using BigInt for extremely large numbers
 * Simplified planetary distance simulations
 * Approximate real-time Earth-to-planet distance calculations
 * Time-based orbital simulation using Unix epoch calculations
 * SQLite database integration
 * Persistent calculation history
+* Saving factorial calculations to the database
 * Viewing saved calculation history
 * Clearing calculation history with confirmation prompts
+* Input validation and error handling
 * Overflow detection for invalid or infinite results
 * Colored terminal output and styled warning/error messages
 
 ---
 
-# Recent additions include:
- simplified orbital mechanics simulations capable of estimating current distances between Earth and several planets using time-based orbital calculations.
- 
+# Recent Additions
+
+Recent additions to the project include:
+
+* A customizable Fibonacci sequence generator
+* Factorial calculations capable of handling very large values using Julia's BigInt type
+* Improved input handling and integer conversion for factorial operations
+* Additional modular math utility functions
+* Simplified orbital mechanics simulations capable of estimating current distances between Earth and several planets using time-based orbital calculations
 ---
 
 # Technologies Used
@@ -61,20 +71,20 @@ helpers.jl
 calculator_operations.jl
 menu.jl
 database_helpers.jl
+planet_tools.jl
 calculator_history.db
-```
 
 ## Module Responsibilities
 
-| File                       | Purpose                                |
-| -------------------------- | -------------------------------------- |
-| `main.jl`                  | Main application loop and menu routing |
-| `math_tools.jl`            | Mathematical calculation functions     |
-| `helpers.jl`               | Input validation and output formatting |
-| `calculator_operations.jl` | User workflow orchestration            |
-| `menu.jl`                  | Main menu display                      |
-| `database_helpers.jl`      | SQLite database management             |
-
+| File                       | Purpose                                                        |
+| -------------------------- | -------------------------------------------------------------- |
+| `main.jl`                  | Main application loop and menu routing                         |
+| `math_tools.jl`            | Mathematical calculation functions and sequence generation     |
+| `helpers.jl`               | Input validation and output formatting                         |
+| `calculator_operations.jl` | User workflow orchestration and operation handling             |
+| `menu.jl`                  | Main menu and submenu display functions                        |
+| `database_helpers.jl`      | SQLite database management and history storage                 |
+| `planet_tools.jl`          | Planetary simulation logic and orbital distance calculations   |
 ---
 
 # Installation & Setup

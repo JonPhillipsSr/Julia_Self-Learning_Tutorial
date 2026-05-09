@@ -4,6 +4,7 @@ module MathTools
     export multiply_numbers
     export area_of_circle
     export fibonacci_sequence
+    export calculate_factorial
 
 
     function add_numbers(a, b)
@@ -32,5 +33,20 @@ module MathTools
         end
         
         return sequence
+    end
+
+    function calculate_factorial(num1)
+        
+        if num1 < 0
+           printstyled(" ☠️    ERROR   ☠️\nFactorials cannot be calculated for negative numbers\n", color=:red, bold=true)
+        end
+
+        result = BigInt(1)
+
+        for i in 1:num1
+            result *=i
+        end
+
+        return result
     end
 end
