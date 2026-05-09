@@ -56,7 +56,7 @@ module CalculatorOperations
         )
     end
 
-    function perform_planet_distance()
+    function perform_planet_distance(db)
         printstyled("Use this calculator to estimate the current distance between Earth and the planet of your choice.\n", color=:magenta)
         println()
         printstyled("Results are generated using a simplified orbital simulation that estimates planetary positions based
@@ -115,6 +115,13 @@ module CalculatorOperations
         println()
         days = current_days_since_unix_epoch()
         distance = distance_from_earth(planet, days)
+       save_calculation(
+            db,
+            "Distance to $(planet.name)",
+            nothing,
+            nothing,
+            distance
+)
         
         display_results("Approximate distance from Earth (km): ", distance)
     end

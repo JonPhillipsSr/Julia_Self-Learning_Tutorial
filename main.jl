@@ -38,13 +38,13 @@ function main()
             perform_area_of_circle(db)
         
         elseif choice == "4"
-            show_history(db)
+            perform_planet_distance(db)
         
         elseif choice == "5"
-            clear_history(db)
+            show_history(db)
 
         elseif choice == "6"
-            perform_planet_distance()
+            clear_history(db)
 
         elseif choice == "7"
             printstyled("😁    Thanks for using my program, Have a wonderful day!   😁\n\n\n", color=:green, bold=true)

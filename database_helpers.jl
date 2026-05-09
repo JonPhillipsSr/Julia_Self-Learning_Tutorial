@@ -43,14 +43,18 @@ module DatabaseHelpers
         println("\n=== Calculation History ===")
 
         for row in rows 
+            input1 = ismissing(row.input1) ? "" : row.input1
+            input2 = ismissing(row.input2) ? "" : row.input2
+
             println(
                 row.id, ". ",
                 row.operation, " | ",
-                row.input1, " | ",
-                row.input2, " | ",
+                input1, " | ",
+                input2, " | ",
                 row.result
             )
         end
+
     end
 
     function clear_history(db)
